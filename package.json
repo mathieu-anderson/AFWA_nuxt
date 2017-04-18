@@ -1,7 +1,7 @@
 {
-  "name": "portfolio_v2",
+  "name": "afwanuxt",
   "version": "1.0.0",
-  "description": "Second approahc for a portfolio site using Nuxt.js",
+  "description": "A simple Nuxt app to access the Allianxe Française Wellington's archives",
   "author": "mathieu-anderson <mathieu.hj.anderson@gmail.com>",
   "private": true,
   "dependencies": {
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
+    "dotenv": "^4.0.0",
     "eslint": "^3.15.0",
     "eslint-config-standard": "^6.2.1",
     "eslint-loader": "^1.6.1",

@@ -5,8 +5,8 @@ html, body
   letter-spacing: 0.5px;
   font-family: "Source Sans Pro", Arial, sans-serif;
   height: 100vh;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 8%;
+  padding-right: 8%;
 }
 
 footer
@@ -18,14 +18,11 @@ footer
 header
 {
   font-size: 1em;
-  width: 100vw;
+  width: 100%;
   position: fixed;
   margin-top: -1em;
-  margin-left: -1em;
-  padding: 1em;
   color: #2B2D42;
   background-color: #D90429;
-  text-align: left;
 }
 
 a, a:focus, a:visited
@@ -40,7 +37,10 @@ a:hover
   color:  #EF233C;
 }
 
-.arrow
-{
+h1 {
   font-size: 2em;
+}
+
+.container {
+  padding-top: 3em;
 }

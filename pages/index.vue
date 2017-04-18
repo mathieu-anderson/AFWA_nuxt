@@ -2,69 +2,42 @@
   <div class="container">
     <section class="part1">
       <h1 class="title">
-        Mathieu Anderson
+        Welcome!
       </h1>
-      <h2 class="info">
-        is a web developer.
-      </h2>
       <p>
-        He really should not speak of himself in the third person, though.
+        Please use the form below to search through our treasures.
       </p>
     </section>
     <section class="part2">
       <h1 class="title">
-        My journey
+        Search...
       </h1>
-      <h2 class="info">
-        through code.
-      </h2>
-      <p>
-        Here is a fancy table of my skills with a timeline of when and how I learned them, as well as related projects.
-      </p>
-      <p>
-        Here is a fancy table of my skills with a timeline of when and how I learned them, as well as related projects.
-      </p>
-      <p>
-        Here is a fancy table of my skills with a timeline of when and how I learned them, as well as related projects.
-      </p>
-      <p>
-        Here is a fancy table of my skills with a timeline of when and how I learned them, as well as related projects.
-      </p>
-      <p>
-        Here is a fancy table of my skills with a timeline of when and how I learned them, as well as related projects.
-      </p>
-      <p>
-        Here is a fancy table of my skills with a timeline of when and how I learned them, as well as related projects.
-      </p>
-      <p>
-        Here is a fancy table of my skills with a timeline of when and how I learned them, as well as related projects.
-      </p>
-      <p>
-        Here is a fancy table of my skills with a timeline of when and how I learned them, as well as related projects.
-      </p>
-    </section>
-    <section class="part2">
-      <h1 class="title">
-        I am looking for
-      </h1>
-      <h2 class="info">
-        truth... and a job.
-      </h2>
-      <p>
-        I will detail my idal job here. Damn this is hard
-      </p>
-    </section>
-    <section class="part3">
-      <h1 class="title">
-        Find me
-      </h1>
-      <h2 class="info">
-        everywhere!
-      </h2>
-      <p>
-        <a name="contact"></a>
-        All my social links and my CV!
-      </p>
+      <form class="search" action="resource.html" method="get">
+        By year : <input label="year" type="text" name="searchName" value="" placeholder="1908">
+        <br /><br />
+        By story :
+        <select name="story">
+          <option value="cultural">AF Wellington : a cultural institution</option>
+          <option value="finlayson">Renée Finlayson : une femme du monde</option>
+          <option value="genesis">The genesis : Harold Beauchamp</option>
+          <option value="ww2">World War 2</option>
+          <option value="fragments">Fragments of history</option>
+        </select>
+        <br /><br />
+        By nature : <br />
+        <input type="checkbox" name="nature" value="document" checked> Document<br />
+        <input type="checkbox" name="nature" value="letter" checked> Letter<br />
+        <input type="checkbox" name="nature" value="photo" checked> Photography / Negatives<br />
+        <input type="checkbox" name="nature" value="press" checked> Press cutting<br />
+        <input type="checkbox" name="nature" value="artefact" checked> Artefact<br />
+        <input type="checkbox" name="nature" value="photocopy" checked> Photocopy
+        <br /><br />
+        Digitized : <br />
+        <input type="radio" name="digitized" value="yes" checked> Yes<br />
+        <input type="radio" name="digitized" value="no" checked> No<br />
+        <br />
+        <input type="submit" name="submit" value="search">
+      </form>
     </section>
   </div>
 </template>
@@ -85,16 +58,16 @@ export default {
 
 <style scoped>
 
-.part1, .part2, .part3
+.part1, .part2
 {
-  padding: 1em;
+  padding-top: 0.1em;
+  padding-bottom: 1em;
   background-color: #EDF2F4;
 }
 
 .part1
 {
-margin-top: -1em;
-margin-bottom: 1em;
+  text-align: center;
 }
 
 .part2
@@ -103,27 +76,12 @@ margin-top: 1em;
 margin-bottom: 1em;
 }
 
-.part3
-{
-margin-top: 1em;
-margin-bottom: -1em;
+.title {
+  text-align: center;
 }
 
-.title
-{
-  color: #2B2D42;
-  font-weight: 600;
-  margin-bottom: -0.5em;
-}
-
-.info
-{
-  font-weight: 300;
-  color: #D90429;
-}
-
-.button
-{
-  margin-top: 50px;
-}
+/*.search {
+  display: flex;
+  flex-flow: wrap;
+}*/
 </style>

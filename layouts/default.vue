@@ -1,55 +1,23 @@
 <template>
   <div>
-    <Header/>
+    <appHeader/>
     <a name="start"></a>
     <nuxt/>
-    <Footer/>
+    <appFooter/>
   </div>
 </template>
 
 <script>
-import Header from '~components/Header.vue'
-import Footer from '~components/Footer.vue'
+import appHeader from '~components/appHeader.vue'
+import appFooter from '~components/appFooter.vue'
 
 export default {
   components: {
-    Header,
-    Footer
+    appHeader,
+    appFooter
   }
 }
 </script>
 
 <style>
-.container
-{
-  padding-top: 4em;
-  width: 100%;
-  text-align: center;
-}
-
-.button, .button:visited
-{
-  display: inline-block;
-  color: #3B8070;
-  letter-spacing: 1px;
-  background-color: #fff;
-  border: 2px solid #3B8070;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 15px 45px;
-}
-
-.button:hover, .button:focus
-{
-  color: #fff;
-  background-color: #3B8070;
-}
-
-.title
-{
-  color: #505153;
-  font-weight: 300;
-  font-size: 2.5em;
-  margin: 0;
-}
 </style>
