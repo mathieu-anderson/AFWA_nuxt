@@ -6,15 +6,19 @@
       </h1>
       <p>Box : {{box}}</p>
       <p>Item : {{item}}</p>
-      <!-- #if displayElement -->
-      <p>Element : {{element}}</p>
-      <!-- /if -->
-      <p>Number of pages : {{pages}}</p>
-      <p>Year : {{year}}</p>
-      <p>Nature : {{nature}}</p>
-      <!-- #if displayStory -->
-      <p>Story : {{story}}</p>
-      <!-- /if -->
+      <p v-if="element">Element : {{element}}</p>
+      <p>Number of pages : {{volume}}</p>
+      <p>Year :
+        <span v-for="year in years">
+          {{year}},
+        </span>
+      </p>
+      <p>Nature :
+        <span v-for="nature in natures">
+          {{nature}},
+        </span>
+      </p>
+      <p v-if="story">Story : {{story}}</p>
       <p>Content : {{content}}</p>
       <p>Digitized : {{digitized}}</p>
     </section>
@@ -27,19 +31,36 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   data () {
     return {
       box: '',
       item: '',
       element: '',
-      pages: null,
-      year: '',
-      nature: '',
+      volume: null,
+      years: '',
+      natures: '',
       story: '',
       content: '',
       digitized: ''
     }
+  },
+  created: function () {
+    axios.get(`http://localhost:3000/api/v1/resources/${this.$route.params._id}`)
+      .then((res) => {
+        console.log(res.data[0])
+        this.box = res.data[0].box
+        this.item = res.data[0].item
+        this.element = res.data[0].element
+        this.volume = res.data[0].volume
+        this.years = res.data[0].year
+        this.natures = res.data[0].nature
+        this.story = res.data[0].story
+        this.content = res.data[0].content
+        this.digitized = res.data[0].digitized
+      })
   },
   methods () {
   }
