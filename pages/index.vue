@@ -12,11 +12,12 @@
       <h1 class="title">
         Search...
       </h1>
-      <form class="search" action="resource.html" method="get">
-        By year : <input label="year" type="text" name="searchName" value="" placeholder="1908">
+      <form class="search" action="resources/search" method="get">
+        From <input label="yearStart" type="text" name="yearStart" value="" placeholder="1908"> to <input label="yearEnd" type="text" name="yearEnd" value="" placeholder="2008">
         <br /><br />
         By story :
         <select name="story">
+          <option value="noStory">-</option>
           <option value="cultural">AF Wellington : a cultural institution</option>
           <option value="finlayson">Renée Finlayson : une femme du monde</option>
           <option value="genesis">The genesis : Harold Beauchamp</option>
