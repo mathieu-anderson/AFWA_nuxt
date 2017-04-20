@@ -1,6 +1,5 @@
-# portfolio_v2
-
-> Second approach for a portfolio site using Nuxt.js
+# Alliance Française Wellington Archives
+A simple Nuxt.js app to search through the AF Wellington archives database.
 
 ## Build Setup
 

@@ -15,6 +15,8 @@
       <form class="search" action="resources/search" method="get">
         From <input label="yearStart" type="text" name="yearStart" value="" placeholder="1908"> to <input label="yearEnd" type="text" name="yearEnd" value="" placeholder="2008">
         <br /><br />
+        By word : <input label="word" type="word" name="word" value="" placeholder="a place, a name">
+        <br /><br />
         By story :
         <select name="story">
           <option value="noStory">-</option>
@@ -24,14 +26,6 @@
           <option value="ww2">World War 2</option>
           <option value="fragments">Fragments of history</option>
         </select>
-        <br /><br />
-        By nature : <br />
-        <input type="checkbox" name="nature" value="document" checked> Document<br />
-        <input type="checkbox" name="nature" value="letter" checked> Letter<br />
-        <input type="checkbox" name="nature" value="photo" checked> Photography / Negatives<br />
-        <input type="checkbox" name="nature" value="press" checked> Press cutting<br />
-        <input type="checkbox" name="nature" value="artefact" checked> Artefact<br />
-        <input type="checkbox" name="nature" value="photocopy" checked> Photocopy
         <br /><br />
         Digitized : <br />
         <input type="radio" name="digitized" value="yes" checked> Yes<br />

@@ -25,7 +25,7 @@ export default {
   },
   created: function () {
     console.log(this.$route.query)
-    axios.get(`http://localhost:3000/api/v1/resources/search?yearStart=${this.$route.query.yearStart}&yearEnd=${this.$route.query.yearEnd}`)
+    axios.get(`http://localhost:3000/api/v1/resources/search?yearStart=${this.$route.query.yearStart}&yearEnd=${this.$route.query.yearEnd}&word=${this.$route.query.word}&story=${this.$route.query.story}&digitized=${this.$route.query.digitized}`)
       .then((res) => {
         console.log(res)
       })
