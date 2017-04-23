@@ -50,7 +50,6 @@ export default {
   created: function () {
     axios.get(`http://localhost:3000/api/v1/resources/${this.$route.params._id}`)
       .then((res) => {
-        console.log(res.data[0])
         this.box = res.data[0].box
         this.item = res.data[0].item
         this.element = res.data[0].element

@@ -4,7 +4,14 @@
       <h1 class="title">
         Your search result :
       </h1>
-      <p> a bunch of stuff</p>
+      <a href="result.item">
+        <p v-for="result in results">
+          <span v-if="!element">{{result.item}},</span>
+          <span v-if="element">{{result.element}},</span>
+          <span v-for="nature in result.nature">{{nature}} </span>,
+          <span v-for="year in result.year">{{year}} </span>,
+        </p>
+      </a>
     </section>
     <section class="part2">
       <h1 class="title">
@@ -27,7 +34,10 @@ export default {
     console.log(this.$route.query)
     axios.get(`http://localhost:3000/api/v1/resources/search?yearStart=${this.$route.query.yearStart}&yearEnd=${this.$route.query.yearEnd}&word=${this.$route.query.word}&story=${this.$route.query.story}&digitized=${this.$route.query.digitized}`)
       .then((res) => {
-        console.log(res)
+        this.results = res.data
+      })
+      .then((results) => {
+        console.log(this.results)
       })
   }
 }
