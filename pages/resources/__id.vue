@@ -4,23 +4,26 @@
       <h1 class="title">
         Your resource :
       </h1>
-      <p>Box : {{box}}</p>
-      <p>Item : {{item}}</p>
-      <p v-if="element">Element : {{element}}</p>
-      <p>Number of pages : {{volume}}</p>
-      <p>Year :
-        <span v-for="year in years">
-          {{year}},
-        </span>
-      </p>
-      <p>Nature :
-        <span v-for="nature in natures">
-          {{nature}},
-        </span>
-      </p>
-      <p v-if="story">Story : {{story}}</p>
-      <p>Content : {{content}}</p>
-      <p>Digitized : {{digitized}}</p>
+      <a class="img" href="http://placehold.it"><img src="http://placehold.it/350x500"></a>
+      <div class="info">
+        <p>Box : {{box}}</p>
+        <p>Item : {{item}}</p>
+        <p v-if="element">Element : {{element}}</p>
+        <p>Number of pages : {{volume}}</p>
+        <p>Year :
+          <span v-for="year in years">
+            {{year}},
+          </span>
+        </p>
+        <p>Nature :
+          <span v-for="nature in natures">
+            {{nature}},
+          </span>
+        </p>
+        <p v-if="story">Story : {{story}}</p>
+        <p>Content : {{content}}</p>
+        <p>Digitized : {{digitized}}</p>
+      </div>
     </section>
     <section class="part2">
       <h1 class="title">
@@ -78,6 +81,19 @@ export default {
 .part1
 {
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img
+{
+  flex: 1 0 0;
+}
+
+.info
+{
+  flex: 1 0 0;
+  text-align: left;
 }
 
 .part2
@@ -87,6 +103,8 @@ margin-top: 1em;
 
 .title {
   text-align: center;
+  flex: 1 0 0;
+  flex-basis: 100%;
 }
 
 </style>

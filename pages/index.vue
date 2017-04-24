@@ -13,7 +13,7 @@
         Search...
       </h1>
       <form class="search" action="resources/search" method="get">
-        From <input label="yearStart" type="text" name="yearStart" value="1908" placeholder="1908"> to <input label="yearEnd" type="text" name="yearEnd" value="1915" placeholder="2008">
+        From <input class="date" label="yearStart" type="text" name="yearStart" value="1908" placeholder="1908"> to <input  class="date" label="yearEnd" type="text" name="yearEnd" value="1915" placeholder="2008">
         <br /><br />
         By word : <input label="word" type="word" name="word" value="beauchamp" placeholder="a place, a name">
         <br /><br />
@@ -52,6 +52,10 @@ export default {
 </script>
 
 <style scoped>
+.date
+{
+  width: 3em;
+}
 
 .part1, .part2
 {
@@ -69,6 +73,8 @@ export default {
 {
 margin-top: 1em;
 margin-bottom: 1em;
+padding-left: 10vw;
+padding-right: 10vw;
 }
 
 .title {
