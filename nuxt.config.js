@@ -1,3 +1,5 @@
+const axios = require('axios')
+
 module.exports = {
   // generate: {
   // routes: [
@@ -167,7 +169,21 @@ module.exports = {
   //   "/resources/AAF-9_12",
   //   "/resources/AAF-9_13",
   //   "/resources/AAF-9_14"
-  //   ]
+  // //   ]
+  // generate: {
+  //   routes () {
+  //     return axios.get('https://afwaapi.herokuapp.com/api/v1/resources')
+  //     .then((res) => {
+  //       return res.data.map((resource) => {
+  //         console.log(resource)
+  //         if (resource.element) {
+  //           return '/resources/' + resource.element
+  //         } else {
+  //           return '/resources/' + resource.item
+  //         }
+  //       })
+  //     })
+  //   }
   // },
   /*
   ** Headers of the page
