@@ -7,6 +7,7 @@
       <p>
         Please use the form below to search through our treasures.
       </p>
+      <p class="disclaimer">Disclaimer : this is a very rough prototype to showcase one possible use of a properly maintained and digitized archives database. The "search" functionality may give funky results : it is advised to only use the "year" and "word" filters. You can also access individual resources directly by going to the URL http://afwa.herokuapp.com/resources/[item], like so : <a href="http://afwa.herokuapp.com/resources/AAF-9_01">http://afwa.herokuapp.com/resources/AAF-9_01</a></p>
     </section>
     <section class="part2">
       <h1 class="title">
@@ -52,6 +53,11 @@ export default {
 </script>
 
 <style scoped>
+.disclaimer
+{
+  font-weight: bold;
+}
+
 .date
 {
   width: 3em;
@@ -61,6 +67,8 @@ export default {
 {
   padding-top: 0.1em;
   padding-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
   background-color: #EDF2F4;
 }
 

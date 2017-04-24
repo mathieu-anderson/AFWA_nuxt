@@ -4,7 +4,8 @@
       <h1 class="title">
         Your resource :
       </h1>
-      <a class="img" href="http://placehold.it"><img src="http://placehold.it/350x500"></a>
+      <a class="img" v-if="item === 'AAF-9_01'" href="http://i.imgur.com/2AvggOd.jpg"><img class="demo" src="http://i.imgur.com/2AvggOd.jpg"></a>
+      <a class="img" v-else href="http://placehold.it/700x1000"><img src="http://placehold.it/350x500"></a>
       <div class="info">
         <p>Box : {{box}}</p>
         <p>Item : {{item}}</p>
@@ -51,7 +52,7 @@ export default {
     }
   },
   created: function () {
-    axios.get(`http://localhost:3000/api/v1/resources/${this.$route.params._id}`)
+    axios.get(`https://afwaapi.herokuapp.com/api/v1/resources/${this.$route.params._id}`)
       .then((res) => {
         this.box = res.data[0].box
         this.item = res.data[0].item
@@ -70,6 +71,12 @@ export default {
 </script>
 
 <style lang="css">
+
+.demo
+{
+  padding-top: 15vh;
+  max-width: 30vw;
+}
 
 .part1, .part2
 {
