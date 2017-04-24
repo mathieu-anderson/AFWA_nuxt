@@ -10,7 +10,7 @@
             <span v-if="result.element">{{result.element}}, </span>
             <span v-for="nature in result.nature">{{nature}}, </span>
             <span v-for="year in result.year">
-              {{year}}, 
+              {{year}},
             </span>
           </a>
         </p>
@@ -18,7 +18,7 @@
     </section>
     <section class="part2">
       <h1 class="title">
-        Back to search
+        <a href="/">Back to search</a>
       </h1>
     </section>
   </div>
@@ -46,7 +46,12 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style scoped lang="css">
+
+a:hover
+{
+  border-bottom: 2px solid #D90429;
+}
 
 .part1, .part2
 {
