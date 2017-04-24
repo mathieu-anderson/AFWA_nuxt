@@ -52,7 +52,7 @@ export default {
     }
   },
   created: function () {
-    axios.get(`https://afwaapi.herokuapp.com/api/v1/resources/${this.$route.params._id}`)
+    axios.get(`https://afwaapi.herokuapp.com/api/v1/resources/${this.$route.params.id}`)
       .then((res) => {
         this.box = res.data[0].box
         this.item = res.data[0].item
