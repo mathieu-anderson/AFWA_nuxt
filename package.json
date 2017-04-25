@@ -6,7 +6,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.16.1",
-    "nuxt": "latest"
+    "nuxt": "^0.10.6"
   },
   "scripts": {
     "dev": "PORT=3001 nuxt",
