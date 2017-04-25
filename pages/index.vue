@@ -7,6 +7,9 @@
       <p>
         Please use the form below to search through our treasures.
       </p>
+      <div class="red">
+        Please allow a few minutes for the servers to "wake up" after you first request. This is hosted on a free space, which means it is very slow at first. It gets better!
+      </div>
       <p class="disclaimer">Disclaimer : this is a very rough prototype to showcase one possible use of a properly maintained and digitized archives database. The "search" functionality may give funky results : it is advised to only use the "year" and "word" filters. You can also access individual resources directly by going to the URL http://afwa.herokuapp.com/resources/[item], like so : <a href="http://afwa.herokuapp.com/resources/AAF-9_01">http://afwa.herokuapp.com/resources/AAF-9_01</a></p>
     </section>
     <section class="part2">
@@ -43,6 +46,14 @@ export default {
 </script>
 
 <style scoped>
+
+.red
+{
+  color:  #D90429;
+  border: 1px solid #D90429;
+  font-weight: normal;
+}
+
 .disclaimer
 {
   font-weight: bold;
