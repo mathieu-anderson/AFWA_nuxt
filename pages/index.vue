@@ -17,9 +17,9 @@
         Search...
       </h1>
       <form class="search" action="resources/search" method="get">
-        From <input class="date" label="yearStart" type="text" name="yearStart" value="1908" placeholder="1908"> to <input  class="date" label="yearEnd" type="text" name="yearEnd" value="1915" placeholder="2008">
+        From <input class="date" label="yearStart" type="text" name="yearStart" value="" placeholder="1908"> to <input  class="date" label="yearEnd" type="text" name="yearEnd" value="" placeholder="2008">
         <br /><br />
-        By word : <input label="word" type="word" name="word" value="beauchamp" placeholder="a place, a name">
+        By word : <input label="word" type="word" name="word" value="" placeholder="a place, a name">
         <br /><br />
         By story :
         <select name="story">

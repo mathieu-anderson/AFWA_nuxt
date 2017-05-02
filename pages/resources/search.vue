@@ -34,13 +34,13 @@ export default {
     }
   },
   created: function () {
-    console.log(this.$route.query)
+    console.log('query : ', this.$route.query)
     axios.get(`https://afwaapi.herokuapp.com/api/v1/resources/search?yearStart=${this.$route.query.yearStart}&yearEnd=${this.$route.query.yearEnd}&word=${this.$route.query.word}&story=${this.$route.query.story}&digitized=${this.$route.query.digitized}`)
       .then((res) => {
         this.results = res.data
       })
       .then((results) => {
-        console.log(this.results)
+        console.log('results : ', this.results)
       })
   }
 }

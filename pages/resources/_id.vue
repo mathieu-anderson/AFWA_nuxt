@@ -1,5 +1,14 @@
 <template lang="html">
-  <div class="container">
+
+  <div v-if="loading" class="container">
+    <section class="part1">
+      <h1 class="title">
+        Loading
+      </h1>
+    </section>
+  </div>
+
+  <div v-else-if="box" class="container">
     <section class="part1">
       <h1 class="title">
         Your resource :
@@ -32,6 +41,20 @@
       </h1>
     </section>
   </div>
+
+  <div v-else class="container">
+    <section class="part1">
+      <h1 class="title">
+        No such resource :(
+      </h1>
+    </section>
+    <section class="part2">
+      <h1 class="title">
+        <a href="/">Back to search</a>
+      </h1>
+    </section>
+  </div>
+
 </template>
 
 <script>
@@ -40,6 +63,7 @@ import axios from 'axios'
 export default {
   data () {
     return {
+      loading: '',
       box: '',
       item: '',
       element: '',
@@ -52,20 +76,26 @@ export default {
     }
   },
   created: function () {
+    this.loading = true
     axios.get(`https://afwaapi.herokuapp.com/api/v1/resources/${this.$route.params.id}`)
       .then((res) => {
-        this.box = res.data[0].box
-        this.item = res.data[0].item
-        this.element = res.data[0].element
-        this.volume = res.data[0].volume
-        this.years = res.data[0].year
-        this.natures = res.data[0].nature
-        this.story = res.data[0].story
-        this.content = res.data[0].content
-        this.digitized = res.data[0].digitized
+        if (res.data.length === 0) {
+          this.loading === false
+        } else {
+          this.box = res.data[0].box
+          this.item = res.data[0].item
+          this.element = res.data[0].element
+          this.volume = res.data[0].volume
+          this.years = res.data[0].year
+          this.natures = res.data[0].nature
+          this.story = res.data[0].story
+          this.content = res.data[0].content
+          this.digitized = res.data[0].digitized
+        }
       })
-  },
-  methods () {
+      .then((res) => {
+        this.loading = false
+      })
   }
 }
 </script>
