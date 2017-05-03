@@ -10,7 +10,8 @@
             <span v-if="result.element">{{result.element}}, </span>
             <span v-for="nature in result.nature">{{nature}}, </span>
             <span v-for="year in result.year">
-              {{year}},
+              <span v-if="result.year.indexOf(year) === result.year.length - 1">{{year}}</span>
+              <span v-else>{{year}}, </span>
             </span>
           </a>
         </p>

@@ -22,12 +22,14 @@
         <p>Number of pages : {{volume}}</p>
         <p>Year :
           <span v-for="year in years">
-            {{year}},
+            <span v-if="years.indexOf(year) === years.length - 1">{{year}}</span>
+            <span v-else>{{year}}, </span>
           </span>
         </p>
         <p>Nature :
           <span v-for="nature in natures">
-            {{nature}},
+            <span v-if="natures.indexOf(nature) === natures.length - 1">{{nature}}</span>
+            <span v-else>{{nature}}, </span>
           </span>
         </p>
         <p v-if="story">Story : {{story}}</p>
